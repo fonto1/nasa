@@ -2,6 +2,15 @@
     box-sizing:border-box
 }
 
+#tags a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 20px 0px;
+  margin-right: 10px;
+  color: black;
+ }
+
 .gallery-heading {
   font-size: 60px;
   text-align: center;
