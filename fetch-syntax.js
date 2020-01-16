@@ -21,3 +21,4 @@ fetch(url)
     console.log(data.photos[0]);
 });
 
+
