@@ -18,4 +18,4 @@ fetch(URL)
   .then((myJson) => {
     console.log(myJson);
     let data = myJson;
-  });
+});
