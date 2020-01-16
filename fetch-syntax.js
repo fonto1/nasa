@@ -16,7 +16,8 @@ fetch(url)
     return response.json();
   })
   .then((myJson) => {
-    console.log(myJson);
-    // let data = myJson;
+    // console.log(myJson);
+    let data = myJson;
+    console.log(data.photos[0]);
 });
 
