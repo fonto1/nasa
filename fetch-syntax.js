@@ -11,17 +11,22 @@ let url = "https://api.nasa.gov/mars-photos/api/v1/rovers/" + RoverName + "/phot
 let curiosity = document.getElementById("curiosity");
 let opportunity = document.getElementById("opportunity");
 let spirit = document.getElementById("spirit");
-curiosity.addEventListener('click', Click(e));
-opportunity.addEventListener('click', Click(e));
-spirit.addEventListener('click', Click(e));
+curiosity.addEventListener('click', Click);
+opportunity.addEventListener('click', Click);
+spirit.addEventListener('click', Click);
 
-fetch(url)
-    .then((response) => {
-        return response.json();
-    })
-    .then((myJson) => {
-        // console.log(myJson);
-        let data = myJson;
-        console.log(data.photos[0]);
-        img.src = data.photos[0].img_src;
-    });
+function Click(e) {
+    Rovername = e.target.id;
+
+
+    fetch(url)
+        .then((response) => {
+            return response.json();
+        })
+        .then((myJson) => {
+            // console.log(myJson);
+            let data = myJson;
+            console.log(data.photos[0]);
+            img.src = data.photos[0].img_src;
+        })
+};
