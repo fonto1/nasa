@@ -2,25 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="vi  ewport" content="width=pz, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=pz, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="fetch-syntax.js"></script>
     <title>Document</title>
+    <style>
+        body {
+            background-image: url(img/nasabg.jpg);
+            background-position: top center;
+        }
+        
+        main {
+            display: flex;
+            justify-content: space-between;
+            height: calc(100vh-5rem);
+        }
+        
+        header {
+            display: flex;
+            font-size: 3rem;
+            height: 5rem;
+        }
+        
+        aside ul {
+            display: flex;
+            justify-content: space-around;
+            height: 100%;
+            flex-direction: column;
+            list-style: none;
+        }
+        
+        aside img {
+            width: 300px;
+            scale: auto;
+        }
+        
+        section img {
+            min-width: 800px;
+            scale: auto;
+        }
+        
+        aside {
+            width: 30%;
+        }
+        
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+        }
+    </style>
 </head>
 
+
 <body>
-    <div>
-        <p>MARS - THE FINAL FRONTIER</p>
-        <br>
-        <p><img id="curiosity" src="img/1.jpeg" width="200" height="200" align=”middle></p>
-        <p><img id="opportunity" src="img/2.jpeg" width="200" height="200" align=”right”></p>
-        <p><img id="spirit" src="img/3.jpeg" width="200" height="200" align=”right”></p>
+    <header>Mars - the final frontier</header>
+    <main>
+        <section>
+            <img src="img/5.jpeg" alt="" />
+        </section>
+        <aside>
+            <ul>
+                <li><img id="curiosity" src="img/1.jpeg" /></li>
+                <li><img id="opportunity" src="img/2.jpeg" /></li>
+                <li><img id="spirit" src="img/3.jpeg" /></li>
+            </ul>
+        </aside>
 
-    </div>
+    </main>
 
-    <script src="fetch-syntax.js"></script>
+
 
 </body>
-
 
 </html>
