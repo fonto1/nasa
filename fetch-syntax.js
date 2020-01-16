@@ -5,9 +5,8 @@ let SolNumber = 1000;
 let pageNr = 2;
 let ApiKey = 'VgavwUC9voBguJRtX3UTeFOTIz8lAmsFfDMnTD4W';
 let img = document.getElementById("img");
+let info = document.getElementById("info");
 
-// let ULR = `https://api.nasa.gov/mars-photos/api/v1/rovers/${RoverName}/photos?sol=${SolNumber}&page=${pageNr}&api_key=${ApiKey}`;
-let url = "https://api.nasa.gov/mars-photos/api/v1/rovers/" + RoverName + "/photos?sol=" + SolNumber + "&page=" + pageNr + "&api_key=" + ApiKey;
 let curiosity = document.getElementById("curiosity");
 let opportunity = document.getElementById("opportunity");
 let spirit = document.getElementById("spirit");
@@ -15,8 +14,17 @@ curiosity.addEventListener('click', Click);
 opportunity.addEventListener('click', Click);
 spirit.addEventListener('click', Click);
 
+
+
+
+
+// let ULR = `https://api.nasa.gov/mars-photos/api/v1/rovers/${RoverName}/photos?sol=${SolNumber}&page=${pageNr}&api_key=${ApiKey}`;
+let url = "https://api.nasa.gov/mars-photos/api/v1/rovers/" + RoverName + "/photos?sol=" + SolNumber + "&page=" + pageNr + "&api_key=" + ApiKey;
+
+
 function Click(e) {
     Rovername = e.target.id;
+    console.log(Rovername);
 
 
     fetch(url)
@@ -26,7 +34,9 @@ function Click(e) {
         .then((myJson) => {
             // console.log(myJson);
             let data = myJson;
+            console.log(data);
             console.log(data.photos[0]);
-            img.src = data.photos[0].img_src;
-        })
-};
+            img.innerHTML += `<img src="${data.photos[0].img_src}">`;
+            info.style.display ="none";
+            //img.setAttribute("src") = data.photos[0].img_src;
+        })};
