@@ -6,6 +6,48 @@
     <meta name="vi  ewport" content="width=pz, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body {
+            
+            background-position: top center;
+            background-size: 200px;
+            background-repeat: no-repeat;
+        }
+        main {
+            display: flex;
+            justify-content: space-between;
+            height: calc(100vh-5rem);
+        }
+        header {
+            display: flex;
+            font-size: 3rem;
+            height: 5rem;
+        }
+        aside ul {
+            display: flex;
+            justify-content: space-around;
+            height: 100%;
+            flex-direction: column;
+            list-style: none;
+        }
+        aside img {
+            width: 300px;
+            scale: auto;
+        }
+        section img {
+            min-width: 800px;
+            scale: auto;
+        }
+        aside {
+            width: 30%;
+        }
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,12 +57,22 @@
         <a href="gallery.html">Gallery</a>
     </div>
     <div id="info">
-        <p>MARS - THE FINAL FRONTIER</p>
+        <header>MARS - THE FINAL FRONTIER</header>
         <br>
-        
-        <p><img id="curiosity" src="img/1.jpeg" width="200" height="200" align=”middle></p>
-        <p><img id="opportunity" src="img/2.jpeg" width="200" height="200" align=”right”></p>
-        <p><img id="spirit" src="img/3.jpeg" width="200" height="200" align=”right”></p>
+        <main>
+     
+            <section>
+                <img src=img/5.jpeg alt=""/>
+            </section>
+            <aside>
+            <ul>
+                <li><img id="curiosity" src=img/1.jpeg /></li>
+                <li><img id="opportunity" src=img/2.jpeg /></li>
+                <li><img id="spirit" src=img/3.jpeg /></li>
+            </ul>
+        </aside>
+        </main>
+
         
     </div>
     <div id="img"></div>
