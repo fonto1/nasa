@@ -6,8 +6,10 @@ let pageNr = 2;
 let ApiKey = 'VgavwUC9voBguJRtX3UTeFOTIz8lAmsFfDMnTD4W';
 let img = document.getElementById("img");
 let info = document.getElementById("info");
+let body = document.querySelector("body");
 
-let curiosity = document.getElementById("curiosity");
+let curiosity = document.querySelector("#curiosity");
+console.log(curiosity);
 let opportunity = document.getElementById("opportunity");
 let spirit = document.getElementById("spirit");
 curiosity.addEventListener('click', Click);
@@ -38,5 +40,6 @@ function Click(e) {
             console.log(data.photos[0]);
             img.innerHTML += `<img src="${data.photos[0].img_src}">`;
             info.style.display ="none";
+            
             //img.setAttribute("src") = data.photos[0].img_src;
         })};
